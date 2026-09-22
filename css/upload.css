@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    /* Define 2 colunas: a primeira tem largura fixa (ex: 250px) e a segunda ocupa o restante (1fr) */
+    grid-template-columns: 250px 1fr;
+    /* Define 2 linhas: a primeira ocupa a altura total disponível e a segunda ajusta-se ao rodapé */
+    grid-template-rows: 1fr auto;
+    /* Associa os nomes às áreas do layout */
+    grid-template-areas:
+        "sidebar content"
+        "footer  footer";
+    
+    /* Mantém o layout a ocupar 100% da altura da ecrã */
+    min-height: 100vh;
+    background-color: #525870;
+}
+
+.cabecalho-aside{
+    height: 100vh;
+    grid-area: sidebar;
+    background-color: #222633;
+    color: #fff;
+    padding: 20px;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    grid-area: content;
+ /* Ajuste a cor de fundo */
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.botao-meus-arquivos{
+    display: flex;
+    flex-direction: row;
+    background-color: #525870;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+.botao-meus-arquivos:hover {
+    background-color: #4563db;
+    transition: background-color 0.5s;
+}
+
+.icone-meus-arquivos{
+    width: 50px;
+    height: 50px;
+}
+
+.titulo-botao-meus-arquivos{
+    font-size: 20px;
+    text-align: center;
+}
+
+.botao-upload{
+    /* Ativa o Flexbox para alinhar o ícone e o texto lado a lado */
+    display: flex;
+    align-items: center;     /* Alinha ícone e texto verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */         
+    background-color: #525870;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+.botao-upload:hover {
+    background-color: #4563db;
+    transition: background-color 0.5s;
+}
+.icone-upload{
+    width: 40px;
+    height: 40px;
+}
+.titulo-botao-upload{
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.botao-arquivos-compartilhados{
+    display: flex;
+    align-items: center;     /* Alinha ícone e texto verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */         
+    background-color: #525870;
+    gap: 6px; /* Espaço entre o ícone e o texto */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+.botao-arquivos-compartilhados:hover {
+    background-color: #4563db;
+    transition: background-color 0.5s;
+}
+.icone-arquivos-compartilhados{
+    width: 40px;
+    height: 40px;
+}
+.titulo-botao-arquivos-compartilhados{
+    font-size: 18px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.botao-configuracoes{
+    display: flex;
+    align-items: center;     /* Alinha ícone e texto verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */         
+    background-color: #525870;
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+.botao-configuracoes:hover {
+    background-color: #4563db;
+    transition: background-color 0.5s;
+}
+.icone-configuracoes{
+    width: 40px;
+    height: 40px;
+}
+.titulo-botao-configuracoes{
+    font-size: 20px;
+    text-align: center;
+}
+
+.botao-perfil{
+    display: flex;
+    align-items: center;     /* Alinha ícone e texto verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */     
+    width: 65px;
+    height: 65px;
+    border-radius: 50%; /* Opcional: deixa a imagem redonda */
+    object-fit: cover;  /* Garante que a imagem não fique distorcida */
+
+  /* Posicionamento no canto superior direito */
+    position: absolute; /* Ou use 'fixed' se quiser que ele acompanhe a rolagem da página */
+    top: 10px;          /* 10px de distância do topo */
+    right: 10px;        /* 10px de distância da borda direita */  
+    background-color: #222633;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.botao-perfil:hover {
+    background-color: #4563db;
+    transition: background-color 0.5s;
+}
+.foto-perfil{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorção */
+}
+
+.lista{
+    list-style: none;
+}
